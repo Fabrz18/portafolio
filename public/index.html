@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../resources/styles/style.css">
+    <title>Portfolio</title>
+</head>
+<style>
+    header {
+        display: grid;
+        align-items: center;
+        color: white;
+    }
+    header nav li{
+        text-decoration: none;
+        list-style: none;
+        margin-bottom: 15%;
+    }
+    header nav li a{
+        color: white;
+        text-decoration: none;
+        padding: auto;
+    }
+    body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        background-color: #333;
+        color: white;
+        }
+</style>
+<body>
+    <div class="options">
+        <header>
+            <nav>
+                <li><a href="#Projects">Projects</a></li>
+                <li><a href="#AboutMe"> About me</a></li>
+                <li><a href="#Contact"> Contact </a></li>
+            </nav>
+            
+        </header>
+    </div>
+    
+    <div class="content">
+            <main>
+                <div id="Projects">
+                    <h1>Projects</h1>
+                    <div class="project" id="TextIn">
+                        <h2>TextIn</h2>
+                        <img src="../resources/images/texting.png" height="200px" width="400px"/>
+                        <p>El proyecto se trata basicamente de una replica de facebook donde se maneja en gran escala CSS y JavaScript.
+                            Además se utilizó una API para el manejo de una base de datos en tiempo real y que usuarios puedan agregar
+                            publicaciones y comentarios de forma anónima.
+                        </p>
+                        <a href="https://fabrz18.github.io/textin/" target="_blank">Ruta</a>
+                    </div>
+                    <div class="project" id="CookiesStore">
+                        <h2>CookiesStore</h2>
+                        <img src="../resources/images/CookiesStore.png" height="200px" width="400px"/>
+                        <p>Un proyecto inspirado en la página web de <a href="https://www.starbucks.pe/" style="color: white; text-decoration: none;">StarBucks</a> en la que se uso JavaScript
+                            para realizar la division entre productos que se muestran, dado a que la cantidad de productos a mostrar es 8 por defecto, este se puede modificar para poner la cantidad deseada, sea cual sea la 
+                            cantidad la página solo mostrara hasta 5 productos por fila.
+                        </p>
+                        <a href="https://fabrz18.github.io/Cookies-Store/" target="_blank">Ruta</a>
+                    </div>
+                    <div class="project" id="KingsGym">
+                        <h2>KingsGym</h2>
+                        <img src="../resources/images/KingsGym.png" height="200px" width="400px"/>
+                        <p>Proyecto inspirado en la página web de <a href="https://www.smartfit.com.pe/" style="color: white; text-decoration: none;">SmartFit</a> en el cual se usa JavaScript para trabajar
+                            la parte responsive del proyecto, además se uso la API de smartfit para mostrar el banner de una promoción que se generó en una indicada fecha.
+                        </p>
+                        <a href="https://fabrz18.github.io/KingsGym/" target="_blank">Ruta</a>
+                    </div>
+                </div>
+                <div id="AboutMe">
+                    <h1>About me</h1>
+                    <p>Me llamo Fabrizio, soy un joven de 18 años, me encuentro cursando la carrera de Ingeniería de Sistemas de Información en la Universidad Peruana de Ciencias Aplicadas (UPC) en su sede San Miguel. Tengo un manejo 
+                        del Inglés a nivel Intermedio, escrito y hablado, además de un maneja de tecnologías importantes para desarrollo web. En la universidad he aprendido fundamentos básicos de la programación y de cómo levantar una página web.
+                        Tuve buen desempeño en proyectos que trabaje en equipo en mis cursos de la universidad, desarrolle nuevas habilidades de socialización gracias a ellos, mucho antes era introvertido y tenia miedo a hacer nuevos amigos.
+                    </p>
+                </div>
+                <div id="Contact">
+                    <h1>Contact</h1>
+                    <a href="https://www.linkedin.com/in/fabrizio-arturo-g-22b496325/" target="_blank">LinkedIn</a>
+                    <a href="https://github.com/Fabrz18/" target="_blank">GitHub</a>
+                    <a href="https://www.facebook.com/fabrizio.garro.7" target="_blank">Facebook</a>
+                </div>
+            </main>
+            <footer>
+                <h1>FOOTER</h1>
+                <p>Fabrizio Garro</p>
+                <span>Version 1.0 de mi portafolio, no contiene JavaScript, tiene pocas lineas de CSS, no se usa frameworks, ni APIs</span>
+            </footer>
+    </div>
+</body>
+</html>
