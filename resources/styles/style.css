@@ -2,3 +2,124 @@
     margin: 0;
     padding: 0;
 }
+header {
+    display: grid;
+    align-items: center;
+    color: white;
+}
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    background-color: #333;
+    color: white;
+}
+.options {
+    padding: 10px;
+}
+.options #logo {
+    padding: 1rem;
+    margin: 1rem;
+}
+.options #logo a{
+    color: white;
+    text-decoration: none;
+}
+.options #menu {
+    padding: 1rem;
+}
+
+.options #menu li{
+    padding: .5rem;
+    text-decoration: none;
+    list-style: none;
+}
+
+.options #menu li a {
+    color: white;
+    text-decoration: none;
+}
+
+.options #menu li a:hover {
+    color: #9789f1;
+    transition: 0.2s;
+}
+.content .project {
+    background: #333;
+    padding: 1.5rem;
+    border-radius: 10px;
+    width: 100%;
+    box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.1);
+    margin-bottom: .3rem;
+    justify-items: center;
+    gap: 1rem;  
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra la imagen horizontalmente */
+    text-align: center; /* Centra el texto horizontalmente */
+}
+.content .project h2 {
+    text-align: center;
+    font-size: 3rem;
+}
+.content .project p {
+    font-size: 2rem;
+}
+.content .project img {
+    width: 70%;
+    height: 70%;
+}
+
+.content #AboutMe {
+    padding: 8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.content #AboutMe h1 {
+    font-size: 3rem;
+}
+.content #AboutMe p {
+    font-size: 2rem;
+}
+
+.content #Contact {
+    padding: 8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.content #Contact h1 {
+    font-size: 3rem;
+}
+.content #Contact nav {
+    padding: 2rem;
+    display: flex;
+    gap: 2rem;
+    align-content: center;
+}
+
+.content #Contact nav li {
+    text-decoration: none;
+    list-style: none;
+ }
+.content #Contact a {
+    font-size: 2rem;
+    text-decoration: none;
+    color: white;
+    transition: 0.2s;
+    padding: .5rem;
+    border: 1px solid #4d4c4c;
+    border-radius: 5px;
+}
+.content #Contact #LinkedIn:hover {
+    background-color: #0077b0;
+    transition: 0.2s;
+}
+.content #Contact #GitHub:hover {
+    background-color: #6e5494;
+    transition: 0.2s;
+}
+.content #Contact #Facebook:hover {
+    background-color: #3b5998;
+    transition: 0.2s;
+}

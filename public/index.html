@@ -6,36 +6,20 @@
     <link rel="stylesheet" href="../resources/styles/style.css">
     <title>Portfolio</title>
 </head>
-<style>
-    header {
-        display: grid;
-        align-items: center;
-        color: white;
-    }
-    header nav li{
-        text-decoration: none;
-        list-style: none;
-        margin-bottom: 15%;
-    }
-    header nav li a{
-        color: white;
-        text-decoration: none;
-        padding: auto;
-    }
-    body {
-        font-family: Arial, sans-serif;
-        display: flex;
-        background-color: #333;
-        color: white;
-        }
-</style>
 <body>
     <div class="options">
         <header>
             <nav>
-                <li><a href="#Projects">Projects</a></li>
-                <li><a href="#AboutMe"> About me</a></li>
-                <li><a href="#Contact"> Contact </a></li>
+                <ul id="logo">
+                    <a href="#">Fabrizio</a>    
+                </ul>
+
+                <ul id="menu">
+                    <li><a href="#Projects">Projects</a></li>
+                    <li><a href="#AboutMe"> About me</a></li>
+                    <li><a href="#Contact"> Contact </a></li>
+                </ul>
+                
             </nav>
             
         </header>
@@ -47,7 +31,7 @@
                     <h1>Projects</h1>
                     <div class="project" id="TextIn">
                         <h2>TextIn</h2>
-                        <img src="../resources/images/texting.png" height="200px" width="400px"/>
+                        <img src="../resources/images/texting.png"/>
                         <p>El proyecto se trata basicamente de una replica de facebook donde se maneja en gran escala CSS y JavaScript.
                             Además se utilizó una API para el manejo de una base de datos en tiempo real y que usuarios puedan agregar
                             publicaciones y comentarios de forma anónima.
@@ -56,7 +40,7 @@
                     </div>
                     <div class="project" id="CookiesStore">
                         <h2>CookiesStore</h2>
-                        <img src="../resources/images/CookiesStore.png" height="200px" width="400px"/>
+                        <img src="../resources/images/CookiesStore.png"/>
                         <p>Un proyecto inspirado en la página web de <a href="https://www.starbucks.pe/" style="color: white; text-decoration: none;">StarBucks</a> en la que se uso JavaScript
                             para realizar la division entre productos que se muestran, dado a que la cantidad de productos a mostrar es 8 por defecto, este se puede modificar para poner la cantidad deseada, sea cual sea la 
                             cantidad la página solo mostrara hasta 5 productos por fila.
@@ -65,7 +49,7 @@
                     </div>
                     <div class="project" id="KingsGym">
                         <h2>KingsGym</h2>
-                        <img src="../resources/images/KingsGym.png" height="200px" width="400px"/>
+                        <img src="../resources/images/KingsGym.png"/>
                         <p>Proyecto inspirado en la página web de <a href="https://www.smartfit.com.pe/" style="color: white; text-decoration: none;">SmartFit</a> en el cual se usa JavaScript para trabajar
                             la parte responsive del proyecto, además se uso la API de smartfit para mostrar el banner de una promoción que se generó en una indicada fecha.
                         </p>
@@ -81,9 +65,12 @@
                 </div>
                 <div id="Contact">
                     <h1>Contact</h1>
-                    <a href="https://www.linkedin.com/in/fabrizio-arturo-g-22b496325/" target="_blank">LinkedIn</a>
-                    <a href="https://github.com/Fabrz18/" target="_blank">GitHub</a>
-                    <a href="https://www.facebook.com/fabrizio.garro.7" target="_blank">Facebook</a>
+
+                    <nav>
+                        <li><a href="https://www.linkedin.com/in/fabrizio-arturo-g-22b496325/" target="_blank" id="LinkedIn">LinkedIn</a></li>
+    <li><a href="https://github.com/Fabrz18/" target="_blank" id="GitHub">GitHub</a></li>
+    <li><a href="https://www.facebook.com/fabrizio.garro.7" target="_blank" id="Facebook">Facebook</a></li>
+                    </nav>
                 </div>
             </main>
             <footer>
