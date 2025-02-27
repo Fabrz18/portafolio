@@ -3,17 +3,24 @@
     padding: 0;
 }
 header {
-    display: grid;
+    display: flex;
     align-items: center;
     color: white;
+   
 }
 body {
     font-family: Arial, sans-serif;
     display: flex;
+    flex-direction: column;
     background-color: #333;
     color: white;
 }
+.Central {
+    display: flex;
+    border-bottom: 1px solid #4d4c4c;
+}
 .options {
+    border-right: 1px solid #4d4c4c;
     padding: 10px;
 }
 .options #logo {
@@ -43,11 +50,19 @@ body {
     color: #9789f1;
     transition: 0.2s;
 }
+.content .ProjectsTitle {
+    color: #9789f1;
+}
+.content #Projects h1{
+    padding: 2rem;
+    font-size: 5rem;
+    text-align: center;
+}
 .content .project {
     background: #333;
     padding: 1.5rem;
     border-radius: 10px;
-    width: 100%;
+    width: 95%;
     box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.1);
     margin-bottom: .3rem;
     justify-items: center;
@@ -67,8 +82,20 @@ body {
 .content .project img {
     width: 70%;
     height: 70%;
+    object-fit: contain;
 }
-
+.content .project .Ruta {
+    padding: 1%;
+    border: 1px solid #4d4c4c;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+.content .project .Ruta:hover {
+    background-color: #9789f1;
+    transition: 0.3s;
+}
 .content #AboutMe {
     padding: 8rem;
     display: flex;
@@ -122,4 +149,9 @@ body {
 .content #Contact #Facebook:hover {
     background-color: #3b5998;
     transition: 0.2s;
+}
+footer {
+    padding: 2rem;
+    width: auto;
+    height: auto;
 }
