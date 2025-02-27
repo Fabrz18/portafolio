@@ -44,6 +44,8 @@ body {
 .options #menu li a {
     color: white;
     text-decoration: none;
+    font-size: 85%;
+    transition: 0.2s;
 }
 
 .options #menu li a:hover {
@@ -95,6 +97,8 @@ body {
 .content .project .Ruta:hover {
     background-color: #9789f1;
     transition: 0.3s;
+    
+    
 }
 .content #AboutMe {
     padding: 8rem;
@@ -149,6 +153,27 @@ body {
 .content #Contact #Facebook:hover {
     background-color: #3b5998;
     transition: 0.2s;
+}
+.content .tecnologias {
+    padding: 8rem;
+    display: grid;
+    gap: 1rem;
+}
+.content .tecnologias h1 {
+    font-size: 3rem;
+}
+.content .tecnologias .logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+}
+.content .tecnologias .TecnologíasLogo{
+    width:  5rem;
+    height: 5rem;
+    object-fit: contain;
 }
 footer {
     padding: 2rem;
