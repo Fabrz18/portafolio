@@ -1,0 +1,31 @@
+<div class="projects-container">
+
+  <h2 class="section-title">Mis Proyectos</h2>
+
+  <div *ngFor="let project of projects" class="project-card">
+
+    <img
+      [src]="project.imageUrl"
+      [alt]="'Imagen de previsualización de ' + project.name"
+      class="project-image"
+    >
+
+    <h3 class="project-name">{{ project.name }}</h3>
+
+    <p class="project-techs">
+      **Tecnologías:** {{ project.technologies }}
+    </p>
+
+    <p class="project-update">
+      **Última Actualización:** {{ project.lastUpdate | date: 'shortDate' }}
+    </p>
+
+  </div>
+
+  <p *ngIf="projects.length === 0" class="no-projects">
+    Aún no hay proyectos disponibles.
+  </p>
+
+</div>
+
+

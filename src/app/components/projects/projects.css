@@ -1,0 +1,99 @@
+/* ------------------------------------------- */
+/* 1. LAYOUT PRINCIPAL (3 columnas) */
+/* ------------------------------------------- */
+
+.projects-container {
+  /* Usamos CSS Grid para el layout principal */
+  display: grid;
+
+  /* Define 3 columnas de igual ancho (1fr = 1 "fracción" del espacio disponible) */
+  grid-template-columns: repeat(3, 1fr);
+
+  /* Espacio (margen) entre las filas y las columnas */
+  gap: 30px;
+
+  /* Asegura que el contenedor no sea demasiado ancho */
+  max-width: 1200px;
+  margin: 40px auto; /* Centra el contenedor y le da margen superior/inferior */
+  padding: 0 20px;
+}
+
+.section-title {
+  /* Para que el título ocupe todo el ancho antes de la cuadrícula */
+  grid-column: 1 / -1;
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2.5em;
+  color: #333;
+}
+
+/* ------------------------------------------- */
+/* 2. ESTILO DE LA TARJETA DEL PROYECTO */
+/* ------------------------------------------- */
+
+.project-card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para efecto 3D */
+  overflow: hidden; /* Importante para que la imagen se ajuste bien */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s; /* Animación al pasar el mouse */
+}
+
+.project-card:hover {
+  transform: translateY(-5px); /* Se levanta ligeramente al pasar el mouse */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.project-name {
+  color: #007bff; /* Color primario para el título */
+  font-size: 1.5em;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+/* ------------------------------------------- */
+/* 3. ESTILO DE LA IMAGEN */
+/* ------------------------------------------- */
+
+.project-image {
+  width: 100%;
+  /* Define una altura fija para que todas las tarjetas sean iguales */
+  height: 180px;
+  object-fit: cover; /* Recorta la imagen sin distorsionarla */
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.project-techs, .project-update {
+  color: #555;
+  font-size: 0.9em;
+  line-height: 1.4;
+}
+
+/* ------------------------------------------- */
+/* 4. RESPONSIVE (Ajuste para móviles y tablets) */
+/* ------------------------------------------- */
+
+/* Para pantallas medianas (tablets) - 2 columnas */
+@media (max-width: 900px) {
+  .projects-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+/* Para pantallas pequeñas (móviles) - 1 columna */
+@media (max-width: 600px) {
+  .projects-container {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 0 10px;
+  }
+
+  .section-title {
+    font-size: 2em;
+  }
+}
