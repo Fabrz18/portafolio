@@ -6,7 +6,7 @@ import {CommonModule, DatePipe} from '@angular/common';
 @Component({
   selector: 'projects',
   standalone: true,
-  imports: [RouterLink, RouterOutlet, DatePipe, CommonModule],
+  imports: [DatePipe, CommonModule],
   templateUrl: './projects.html',
   styleUrl: './projects.css'
 })
