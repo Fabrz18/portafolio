@@ -1,0 +1,30 @@
+<article class="card">
+  <div class="card-image">
+    <img [src]="project.image" [alt]="project.title" loading="lazy">
+    <div class="card-overlay">
+      <div class="links">
+        @if (project.githubUrl) {
+          <a [href]="project.githubUrl" target="_blank" aria-label="Ver código en GitHub">
+            <i class="fab fa-github"></i> Código
+          </a>
+        }
+        @if (project.demoUrl) {
+          <a [href]="project.demoUrl" target="_blank" class="live" aria-label="Ver Demo">
+            <i class="fas fa-external-link-alt"></i> Demo
+          </a>
+        }
+      </div>
+    </div>
+  </div>
+
+  <div class="card-content">
+    <h3 class="title">{{ project.title }}</h3>
+    <p class="description">{{ project.description }}</p>
+
+    <div class="tags">
+      @for (tag of project.tags; track $index) {
+        <span class="tag">{{ tag }}</span>
+      }
+    </div>
+  </div>
+</article>

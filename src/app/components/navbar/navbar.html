@@ -1,0 +1,37 @@
+<header class="header">
+  <div class="container">
+
+    <a href="#" class="logo" (click)="closeMenu()">
+      <code>&lt; Fabrizio Garro /&gt;</code>
+    </a>
+
+    <button class="menu-toggle" (click)="toggleMenu()" aria-label="Abrir menú">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+
+    <nav class="nav-menu" [class.active]="isMenuOpen">
+      <ul>
+        <li>
+          <a href="#projects" (click)="closeMenu()">Proyectos</a>
+        </li>
+        <li>
+          <a href="#skills" (click)="closeMenu()">Tecnologías</a>
+        </li>
+        <li>
+          <a href="#experience" (click)="closeMenu()">Experiencia</a>
+        </li>
+        <li>
+          <a href="#contact" (click)="closeMenu()">Contacto</a>
+        </li>
+        <li>
+          <a href="/assets/documents/CV-FabrizioArturoGarroGarcia.pdf" target="_blank" class="btn-resume" (click)="closeMenu()">
+            Resume
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+  </div>
+</header>

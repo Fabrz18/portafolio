@@ -1,0 +1,134 @@
+.skills-section {
+  padding: 60px 20px;
+  min-height: 100vh;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.main-title {
+  font-size: 2.5rem;
+  color: #040101;
+  margin-bottom: 50px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.skills-container {
+  max-width: 900px; /* Ajustado para que las barras se vean como en la imagen */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.skill-group-card {
+  border-radius: 12px;
+  border: 1px solid #232a35;
+  overflow: hidden;
+}
+
+.group-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.3s ease;
+}
+
+.group-header:hover {
+  background: rgba(9, 37, 76, 0.85);
+  .category-title {
+    color: #fff;
+  }
+  transition: background-color 0.3s ease;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Barra lateral de color */
+.accent-line {
+  width: 4px;
+  height: 40px;
+  border-radius: 4px;
+  background-color: #8b949e;
+}
+
+/*
+  Mapeo de colores basado en la primera palabra del título.
+  Ej: Si se llama "Backend", aplicará la clase .backend
+*/
+.accent-line.backend { background-color: #f97316; }
+.accent-line.frontend { background-color: #0ea5e9; }
+.accent-line.tools { background-color: #eab308; }
+.accent-line.qa { background-color: #22c55e; }
+
+.header-titles {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.category-title {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #040101;
+  font-weight: 600;
+}
+
+.category-subtitle {
+  font-size: 0.8rem;
+  color: #8b949e;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.mini-icons {
+  display: flex;
+  gap: 8px;
+}
+
+.mini-icon {
+  width: 16px;
+  height: 16px;
+  opacity: 0.8;
+}
+
+.chevron {
+  color: #8b949e;
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+  transform: rotate(90deg); /* Flecha apuntando abajo */
+}
+
+.chevron.rotated {
+  transform: rotate(-90deg); /* Flecha apuntando arriba */
+}
+
+.group-content {
+  padding: 0 20px 20px 20px;
+  border-top: 1px solid #232a35;
+  margin-top: 5px;
+  padding-top: 20px;
+}
+
+.skills-grid {
+  display: grid;
+  /* Crea columnas adaptables (mínimo 250px) para acomodar tarjetas más anchas */
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+@media (max-width: 768px) {
+  .mini-icons {
+    display: none; /* Oculta los iconos mini en móviles para no apretar el texto */
+  }
+}

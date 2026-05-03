@@ -1,0 +1,42 @@
+<div class="skills-section">
+  <h2 class="main-title">Habilidades & Tecnologías</h2>
+
+  <div class="skills-container">
+    @for (group of skillGroups; track group.title; let i = $index) {
+      <div class="skill-group-card" [class.open]="openGroups[i]">
+
+        <!-- Cabecera del Acordeón -->
+        <div class="group-header" (click)="toggleGroup(i)">
+          <div class="header-left">
+            <div class="accent-line" [ngClass]="group.title.toLowerCase().split(' ')[0]"></div>
+            <div class="header-titles">
+              <h3 class="category-title">{{ group.title }}</h3>
+              <span class="category-subtitle">{{ group.skills.length }} technologies</span>
+            </div>
+          </div>
+
+          <div class="header-right">
+            <div class="mini-icons">
+              @for (skill of group.skills; track skill.name) {
+                <img [src]="skill.icon" [alt]="skill.name" class="mini-icon">
+              }
+            </div>
+            <!-- Icono de flecha que rota -->
+            <span class="chevron" [class.rotated]="openGroups[i]">&#10095;</span>
+          </div>
+        </div>
+
+        <!-- Contenido del Acordeón (Grid) -->
+        @if (openGroups[i]) {
+          <div class="group-content">
+            <div class="skills-grid">
+              @for (skill of group.skills; track skill.name) {
+                <app-skill-item [skill]="skill"></app-skill-item>
+              }
+            </div>
+          </div>
+        }
+      </div>
+    }
+  </div>
+</div>
